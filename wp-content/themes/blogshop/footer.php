@@ -39,9 +39,9 @@ get_template_part( 'template-parts/footer/footer', $footerlayout );
 				<div class="col-md-6 text-left align-self-center">
 					<div class="site-info">
 						<?php
-						$blogshop_credit = blogshop_footer_credit();
-						esc_html_e( 'Copyright © 2020 All Rights Reserved.', 'blogshop' );
-						echo wp_kses_post( $blogshop_credit );
+						// $blogshop_credit = blogshop_footer_credit();
+						// esc_html_e( 'Copyright © 2020 All Rights Reserved.', 'blogshop' );
+						// echo wp_kses_post( $blogshop_credit );
 						?>
 					</div><!-- .site-info -->
 				</div>
