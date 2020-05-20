@@ -81,4 +81,4 @@ $getalignment = get_theme_mod( 'front_article_alignment', 'center' );
 		?>
 		
 	</div>
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>#post-<?php the_ID(); ?>
