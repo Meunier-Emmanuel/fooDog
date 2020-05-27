@@ -10,7 +10,7 @@ function blogshop_comment_form( $blogshop_comment_field ) {
 add_filter( 'comment_form_defaults', 'blogshop_comment_default_form' );
 function blogshop_comment_default_form( $default_form ) {
 	$default_form['comment_field'] = '<textarea class="form-control" name="comment" rows="7" placeholder="'.esc_attr__( 'Message goes here', 'blogshop' ).'"></textarea> <div class="comment-input-box">';
-	$default_form['submit_button'] = '</div><button type="submit" class="btn btn-primary">' . esc_attr__( 'Post Comment', 'blogshop' ) . '</button></div>';
+	$default_form['submit_button'] = '</div><button type="submit" class="btn btn-primary">' . esc_attr__( 'Leave a comment', 'blogshop' ) . '</button></div>';
 	$default_form['comment_notes_before'] = '';
 	$default_form['title_reply'] = esc_attr__( 'Leave A Comment', 'blogshop' );
 	$default_form['title_reply_before'] = '<div class="widget-title"><h4>';

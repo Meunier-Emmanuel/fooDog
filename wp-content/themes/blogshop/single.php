@@ -49,16 +49,7 @@ if ($getblogsidebar === 'right') {
 							echo '</div>';
 						endif;
 						?>
-						<div class="d-flex single-post-navigation justify-content-between">
-							<div class="previous-post">
-								<div class="postarrow"><i class="fa fa-long-arrow-left"></i><?php echo esc_html_e( 'Previous Post', 'blogshop' ); ?></div>
-								<?php echo get_previous_post_link('%link');?>
-							</div>
-							<div class="next-post">
-								<div class="postarrow"><?php echo esc_html_e( 'Next Post', 'blogshop' ); ?><i class="fa fa-long-arrow-right"></i></div>
-								<?php echo get_next_post_link('%link'); ?>
-							</div>
-						</div>
+						
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :

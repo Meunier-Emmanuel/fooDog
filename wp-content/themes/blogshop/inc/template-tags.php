@@ -163,7 +163,7 @@ function blogshop_cats_related_post() {
     $related_cats_post = new WP_Query( $query_args );
     if($related_cats_post->have_posts()):
     	?>
-			<h4 class="related-post-title"><?php esc_html_e( 'Related Post', 'blogshop' ); ?></h4>
+			<h4 class="related-post-title"><?php esc_html_e( 'YOU MIGHT ALSO LIKE', 'blogshop' ); ?></h4>
     	<?php
     	echo '<div class="related-post-sldider owl-carousel">';
          while($related_cats_post->have_posts()): $related_cats_post->the_post(); ?>
