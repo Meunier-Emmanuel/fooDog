@@ -3,7 +3,50 @@
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
 				<div class="col-md-6 order-md-2 align-self-center order-lg-0 col-lg-4">
-					<div class="social-link-top">
+					
+				</div>
+				<div class="col-md-3 align-self-center col-6 order-md-1 order-lg-1 col-lg-4 text-center">
+					<div class="site-branding">
+						<?php
+						if ( has_custom_logo() ) :
+							the_custom_logo();
+						endif;
+						?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php
+					
+						$blogshop_description = get_bloginfo( 'description', 'display' );
+						if ( $blogshop_description || is_customize_preview() ) :
+							?>
+							<p class="site-description"><?php echo esc_html( $blogshop_description ); /* WPCS: xss ok. */ ?></p>
+							<?php
+						endif;
+						?>
+					</div>
+					
+					
+					<!-- .site-branding -->
+				</div>
+				<div class="col-md-3 col-6 align-self-center order-md-3 order-lg-3 col-lg-4 text-right header-three-search">
+					<div class="row">
+						<div class="col-sm-6 col-6 col-md-8 col-lg-10 text-right pr-0">
+							<?php if (class_exists('woocommerce')): ?>
+							<div class="mini-shop-btn">
+								<div class="mini-shopping-cart-wrapper">
+			                        <div class="mini-shopping-cart-inner">
+			                           <div class="btn-icon">
+			                           	<a href="<?php echo esc_url( wc_get_cart_url() );?>" class="fa fa-shopping-cart"></a>
+			                           </div>
+			                            <div id="minicarcount"></div>
+			                        </div>
+			                    </div>
+							</div>
+							<?php endif; ?>
+						</div>
+
+						<!--iconsearch-->
+						<div class="col-sm-6 col-md-4 col-lg-2 col-6 pl-0 socialheader">
+						<div class="social-link-top">
 					<?php 
 					$facebook = get_theme_mod( 'facebook' );
 					$twitter = get_theme_mod('twitter');
@@ -52,43 +95,6 @@
 					<a href="<?php echo esc_url( $reddit ); ?>" class="fa fa-reddit"></a>
 					<?php endif;?>
 					</div>
-				</div>
-				<div class="col-md-3 align-self-center col-6 order-md-1 order-lg-1 col-lg-4 text-center">
-					<div class="site-branding">
-						<?php
-						if ( has_custom_logo() ) :
-							the_custom_logo();
-						endif;
-						?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-							<?php
-					
-						$blogshop_description = get_bloginfo( 'description', 'display' );
-						if ( $blogshop_description || is_customize_preview() ) :
-							?>
-							<p class="site-description"><?php echo esc_html( $blogshop_description ); /* WPCS: xss ok. */ ?></p>
-							<?php
-						endif;
-						?>
-					</div><!-- .site-branding -->
-				</div>
-				<div class="col-md-3 col-6 align-self-center order-md-3 order-lg-3 col-lg-4 text-right header-three-search">
-					<div class="row">
-						<div class="col-sm-6 col-6 col-md-8 col-lg-10 text-right pr-0">
-							<?php if (class_exists('woocommerce')): ?>
-							<div class="mini-shop-btn">
-								<div class="mini-shopping-cart-wrapper">
-			                        <div class="mini-shopping-cart-inner">
-			                           <div class="btn-icon">
-			                           	<a href="<?php echo esc_url( wc_get_cart_url() );?>" class="fa fa-shopping-cart"></a>
-			                           </div>
-			                            <div id="minicarcount"></div>
-			                        </div>
-			                    </div>
-							</div>
-							<?php endif; ?>
-						</div>
-						<div class="col-sm-6 col-md-4 col-lg-2 col-6 pl-0">
 							<div class="search-popup">
 			                    <div><i class="fa fa-search"></i></div>
 			                </div>

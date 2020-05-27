@@ -39,4 +39,6 @@
 		</div>
 		<?php endif; ?>
 	</div>
-</article>#post-<?php the_ID(); ?>
+</article>
+
+<!--#post---><?php // the_ID(); ?>

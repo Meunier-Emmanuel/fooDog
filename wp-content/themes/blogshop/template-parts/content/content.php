@@ -52,9 +52,13 @@ $getalignment = get_theme_mod( 'article_alignment', 'center' );
 					echo esc_html(blogshop_get_excerpt($getexerpt));
 					?>
 				</div>
-
+				
+<div class="sharecircle">
+				<i class="fas fa-share iconshare"></i>
+				<span>Share</span>
+				
+				</div>
 </div>
-
 
 
 <div class="readmore">
